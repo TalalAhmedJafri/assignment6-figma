@@ -1,116 +1,161 @@
-import React from "react";
-import Image from "next/image";
-import image1 from "public/images/image1.png";
-import image2 from "public/images/image2.png";
-import image3 from "public/images/image3.png";
-import image4 from "public/images/image4.png";
-import image5 from "public/images/image5.png";
-import image6 from "public/images/image6.png";
+import React from 'react';
+import Image from 'next/image';
 
-const categories = [
-  {
-    image: image1,
-    title: "UX/UI Design 201",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
-    category: "Design",
-    rating: 4.8,
-    price: "$400",
-  },
-  {
-    image: image2,
-    title: "Introduction to Python",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
-    category: "Programming",
-    rating: 4.7,
-    price: "$400",
-  },
-  {
-    image: image3,
-    title: "Data Analysis for Beginners",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
-    category: "Business",
-    rating: 4.5,
-    price: "$400",
-  },
-  {
-    image: image4,
-    title: "Art Specialization",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
-    category: "Art",
-    rating: 4.9,
-    price: "$400",
-  },
-  {
-    image: image5,
-    title: "Law",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
-    category: "Law",
-    rating: 4.6,
-    price: "$400",
-  },
-  {
-    image: image6,
-    title: "Introduction to Webflow",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
-    category: "Teach",
-    rating: 4.8,
-    price: "$400",
-  },
-];
-
-const Courses: React.FC = () => {
+const Courses = () => {
   return (
-    <section className="max-w-7xl mx-auto px-4 py-16 bg-white">
-      <div className="text-center mb-12">
-        <h2 className="text-[48px] sm:text-[56px] font-bold text-[#000000]">Courses</h2>
-        <p className="text-[16px] sm:text-[20px] text-[#000000] mt-4">Your Ultimate Guide to Learning</p>
+    <div className='h-auto w-full flex flex-col items-center justify-center my-10  bg-white'>
+      <h1 className="font-roboto font-bold text-[32px] sm:text-[56px] leading-[40px] sm:leading-[67.2px] text-center">
+        Courses
+      </h1>
+      <p className="font-roboto font-normal text-[14px] sm:text-[18px] leading-[20px] sm:leading-[27px] text-center mt-4">
+        Your Ultimate Guide to learning
+      </p>
+
+      <div className="flex space-x-4 mt-6">
+        <button className="w-[100px] sm:w-[120px] h-[35px] sm:h-[40px] p-2 border-b-2 border-black text-black text-center font-medium">
+          Popular
+        </button>
+        <button className="w-[100px] sm:w-[120px] h-[35px] sm:h-[40px] p-2 border-b-2 border-black text-black text-center font-medium">
+          Recommended
+        </button>
+        <button className="w-[100px] sm:w-[120px] h-[35px] sm:h-[40px] p-2 border-b-2 border-black text-black text-center font-medium">
+          Best Price
+        </button>
       </div>
-
-      <section className="max-w-7xl mx-auto px-4 py-5">
-        <div className="flex justify-center mb-16 gap-8">
-          <span className="text-[12px] sm:text-[16px] text-[#000000]">Popular</span> 
-          <span className="text-[12px] sm:text-[16px] text-[#000000]">Recommended</span> 
-          <span className="text-[12px] sm:text-[16px] text-[#000000]">Best Price</span> 
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[24px]">
-          {categories.map((course, index) => (
-            <div key={index} className="bg-[#F7F7F7] p-4 rounded-lg shadow-md">
-              <div className="relative w-full h-48 mb-4">
-                <Image
-                  src={course.image}
-                  alt={course.title}
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-md"
-                />
-              </div>
-
-              <div className="flex justify-between items-center mb-2 px-5 gap-8">
-                <span className="text-sm font-medium text-[#000000] text-[14px]">{course.category}</span>
-                <span className="text-sm font-bold text-[#000000]">⭐ {course.rating.toFixed(1)}</span>
-              </div>
-
-              <h3 className="text-lg sm:text-xl font-bold text-[#000000] mb-2">{course.title}</h3>
-              <p className="text-[#000000] text-[14px] sm:text-[17px] mb-4">{course.description}</p>
-
-              <div className="flex justify-between items-center">
-                <button className="px-6 py-2 text-black border-2 border-black bg-white rounded-md transition-colors hover:bg-black hover:text-white">
-                  Enroll Now
-                </button>
-                <span className="text-[14px] font-bold text-[#000000] px-10">{course.price}</span>
+      <div className="mt-10 w-full pt-[112] pb-[112}">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className=" bg-[#F7F7F7] rounded-md p-4">
+            <Image src="/images/Image1.png" alt="course1" width={500} height={300} className="object-cover rounded-md" />
+            <div className="flex items-center justify-start mt-4">
+              <p className="text-sm text-black">Design</p>
+              <div className="flex items-center ml-2 text-gray-400">
+                <span className="text-lg">★</span>
+                <span className="text-sm text-black ml-2">5.0</span>
               </div>
             </div>
-          ))}
+            <h2 className="font-semibold text-xl mt-2">UX/UI Design 201</h2>
+            <p className="text-black text-[14px] sm:text-[16px] mt-2 text-sm">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.
+            </p>
+            <div className="flex items-center justify-between mt-4">
+              <button className="text-black bg-[#F7F7F7] p-2 px-4 rounded-md text-sm border border-black">
+                Explore Now
+              </button>
+              <div className="bg-gray-100 text-black p-2 px-4 rounded-md text-sm">$400</div>
+            </div>
+          </div>
+          <div className=" bg-[#F7F7F7] rounded-md p-4">
+            <Image src="/images/Image2.png" alt="course2" width={500} height={300} className="object-cover rounded-md" />
+            <div className="flex items-center justify-start mt-4">
+              <p className="text-sm text-black">Programming</p>
+              <div className="flex items-center ml-2 text-gray-400">
+                <span className="text-lg">★</span>
+                <span className="text-sm text-black ml-2">5.0</span>
+              </div>
+            </div>
+            <h2 className="font-semibold text-xl mt-2">Introduction to Python</h2>
+            <p className="text-black text-[14px] sm:text-[16px] mt-2 text-sm">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.
+            </p>
+            <div className="flex items-center justify-between mt-4">
+              <button className="text-black bg-[#F7F7F7] p-2 px-4 rounded-md text-sm border border-black">
+                Explore Now
+              </button>
+              <div className="bg-gray-100 text-black p-2 px-4 rounded-md text-sm">$400</div>
+            </div>
+          </div>
+          <div className=" bg-[#F7F7F7] rounded-md p-4">
+            <Image src="/images/Image3.png" alt="course3" width={500} height={300} className="object-cover rounded-md" />
+            <div className="flex items-center justify-start mt-4">
+              <p className="text-sm text-black">Business</p>
+              <div className="flex items-center ml-2 text-gray-400">
+                <span className="text-lg">★</span>
+                <span className="text-sm text-black ml-2">5.0</span>
+              </div>
+            </div>
+            <h2 className="font-semibold text-xl mt-2">Data Analysis for Beginners</h2>
+            <p className="text-black text-[14px] sm:text-[16px] mt-2 text-sm">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.
+            </p>
+            <div className="flex items-center justify-between mt-4">
+              <button className="text-black bg-[#F7F7F7] p-2 px-4 rounded-md text-sm border border-black">
+                Explore Now
+              </button>
+              <div className="bg-gray-100 text-black p-2 px-4 rounded-md text-sm">$400</div>
+            </div>
+          </div>
         </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+          <div className=" bg-[#F7F7F7] rounded-md p-4 sm:block hidden">
+            <Image src="/images/Image4.png" alt="course4" width={500} height={300} className="object-cover rounded-md" />
+            <div className="flex items-center justify-start mt-4">
+              <p className="text-sm text-black">Art</p>
+              <div className="flex items-center ml-2 text-gray-400">
+                <span className="text-lg">★</span>
+                <span className="text-sm text-black ml-2">5.0</span>
+              </div>
+            </div>
+            <h2 className="font-semibold text-xl mt-2">Art Specialization</h2>
+            <p className="text-black text-[14px] sm:text-[16px] mt-2 text-sm">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.
+            </p>
+            <div className="flex items-center justify-between mt-4">
+              <button className="text-black bg-[#F7F7F7] p-2 px-4 rounded-md text-sm border border-black">
+                Explore Now
+              </button>
+              <div className="bg-gray-100 text-black p-2 px-4 rounded-md text-sm">$400</div>
+            </div>
+          </div>
+          <div className=" bg-[#F7F7F7] rounded-md p-4 sm:block hidden">
+            <Image src="/images/Image5.png" alt="course5" width={500} height={300} className="object-cover rounded-md" />
+            <div className="flex items-center justify-start mt-4">
+              <p className="text-sm text-black">Law</p>
+              <div className="flex items-center ml-2 text-gray-400">
+                <span className="text-lg">★</span>
+                <span className="text-sm text-black ml-2">5.0</span>
+              </div>
+            </div>
 
-        <div className="text-center mt-12">
-          <button className="px-6 py-3 text-black border-2 border-black bg-white rounded-md transition-colors hover:bg-black hover:text-white">
-            View All Courses
-          </button>
+            <h2 className="font-semibold text-xl mt-2">Rule of Law</h2>
+            <p className="text-black text-[14px] sm:text-[16px] mt-2 text-sm">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.
+            </p>
+            <div className="flex items-center justify-between mt-4">
+              <button className="text-black bg-[#F7F7F7] p-2 px-4 rounded-md text-sm border border-black">
+                Explore Now
+              </button>
+              <div className="bg-gray-100 text-black p-2 px-4 rounded-md text-sm">$400</div>
+            </div>
+          </div>
+          <div className=" bg-[#F7F7F7] rounded-md p-4 sm:block hidden">
+            <Image src="/images/Image6.png" alt="course6" width={500} height={300} className="object-cover rounded-md" />
+            <div className="flex items-center justify-start mt-4">
+              <p className="text-sm text-black">Tech</p>
+              <div className="flex items-center ml-2 text-gray-400">
+                <span className="text-lg">★</span>
+                <span className="text-sm text-black ml-2">5.0</span>
+              </div>
+            </div>
+            <h2 className="font-semibold text-xl mt-2">Introduction to Webflow</h2>
+            <p className="text-black text-[14px] sm:text-[16px] mt-2 text-sm">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.
+            </p>
+            <div className="flex items-center justify-between mt-4">
+              <button className="text-black bg-[#F7F7F7] p-2 px-4 rounded-md text-sm border border-black">
+                Explore Now
+              </button>
+              <div className="bg-gray-100 text-black p-2 px-4 rounded-md text-sm">$400</div>
+            </div>
+          </div>
         </div>
-      </section>
-    </section>
+      </div>
+
+      <div className="mt-8 flex justify-center">
+        <button className="text-black bg-white p-2 px-6 rounded-md text-sm border border-black">
+          View All Courses
+        </button>
+      </div>
+    </div>
   );
 };
 

@@ -1,34 +1,35 @@
-const Achievement = () => {
-    return (
-      <section className="max-w-7xl mx-auto px-4 py-16 bg-white">
-        <div className="text-center mb-12">
-          <h2 className="w-full text-[38px] font-bold text-[#000000]">Our Achievements</h2>
-          <p className="text-[20px] text-[#000000] mt-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
-          </p>
-          <br />
-          <br />
-          <div className="flex flex-col lg:flex-row justify-between gap-[24px] mt-2">
-            <div className="flex flex-col items-center gap-8">
-              <span className="text-[40px] font-bold text-[#000000]">+200</span>
-              <span className="text-[16px] text-[#000000] ml-2">Courses</span>
-            </div>
-            <div className="flex flex-col items-center gap-8">
-              <span className="text-[40px] font-bold text-[#000000]">5K</span>
-              <span className="text-[16px] text-[#000000] ml-2">Mentors</span>
-            </div>
-            <div className="flex flex-col items-center gap-8">
-              <span className="text-[40px] font-bold text-[#000000]">370k</span>
-              <span className="text-[16px] text-[#000000] ml-2">Students</span>
-            </div>
-            <div className="flex flex-col items-center gap-8">
-              <span className="text-[40px] font-bold text-[#000000]">100+</span>
-              <span className="text-[16px] text-[#000000] ml-2">Recognition</span>
-            </div>
-          </div>
+import React from 'react';
+
+const Achivements = () => {
+  return (
+    <div className="text-center my-10 px-4 sm:px-8">
+      <h2 className="font-roboto text-[32px] sm:text-[48px] font-bold leading-[40px] sm:leading-[57.6px] text-center">
+        Our Achievements
+      </h2>
+      <p className="font-roboto text-[14px] sm:text-[18px] font-normal leading-[22px] sm:leading-[27px] text-center mt-4">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+      </p>
+
+      <div className="mt-8 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <div className="text-center">
+          <h3 className="text-[32px] sm:text-[40px] font-bold">+200</h3>
+          <p className="text-[14px] sm:text-[16px]">Courses</p>
         </div>
-      </section>
-    );
-  };
-  
-  export default Achievement;
+        <div className="text-center">
+          <h3 className="text-[32px] sm:text-[40px] font-bold">50K</h3>
+          <p className="text-[14px] sm:text-[16px]">Mentors</p>
+        </div>
+        <div className="text-center">
+          <h3 className="text-[32px] sm:text-[40px] font-bold">+370K</h3>
+          <p className="text-[14px] sm:text-[16px]">Students</p>
+        </div>
+        <div className="text-center">
+          <h3 className="text-[32px] sm:text-[40px] font-bold">+100</h3>
+          <p className="text-[14px] sm:text-[16px]">Recognition</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Achivements;

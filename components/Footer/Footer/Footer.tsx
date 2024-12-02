@@ -1,128 +1,110 @@
-import React from 'react';
-import Image from 'next/image';
-import image from '../../../public/images/Frame 1.png';
+import Image from "next/image";
+import Link from "next/link";
 
-const Footer: React.FC = () => {
+export default function Footer() {
   return (
-    <footer className="bg-white border-t border-gray-200 py-8 px-4 md:px-16">
-      {/* Newsletter Section */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-6">
-        <div>
-          <h2 className="text-[18px] font-bold text-[#000000]">
-            Subscribe to our newsletter
-          </h2>
-          <p className="text-[16px] text-[#000000] mt-2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </p>
+    <footer className="bg-White">
+      <div className="max-w-7xl pt-3 px-4 space-y-8 md:px-8">
+        <div className="flex flex-col md:flex-row items-center justify-between">
+          <div className="mb-4 md:mb-0">
+            <h1 className="font-bold text-xl text-center sm:text-left text-black">
+              Subscribe to our newsletter
+            </h1>
+            <p className="text-center sm:text-left text-black">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </div>
+          <div className="flex flex-col w-full md:w-auto">
+            <div className="flex flex-col sm:flex-col md:flex-row items-center space-y-3 sm:space-y-3 w-full md:space-y-0 md:space-x-3">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="p-2 px-7 rounded-md border border-black tracking-widest text-left text-gray-800 w-full sm:w-auto"
+              />
+              <button className="border border-black hover:text-primary hover:bg-text p-1 px-4 rounded-md text-lg">
+                Subscribe
+              </button>
+            </div>
+
+            <p className="text-[13px] mt-3 text-center md:text-left text-black">
+              By subscribing you agree to our{" "}
+              <Link href="#" className="underline underline-offset-4 text-black">
+                Privacy Policy
+              </Link>
+            </p>
+          </div>
         </div>
-
-        <div className="max-w-6xl mx-auto mt-4 ">
-          <form className="flex items-center justify-start gap-1">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-3 py-2 border border-[#000000] text-[#505050] rounded-md focus:outline-none text-sm"
-            />
-            <button
-              type="submit"
-              className="px-3 py-2 text-sm border border-[#000000] text-[#505050] rounded-md"
-            >
-              Subscribe
-            </button>
-          </form>
-          <p className="text-[14px] text-[#000000] mt-4">
-            By subscribing, you agree to our <a href="#" className="underline">Privacy Policy</a>.
-          </p>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
+          <div className="flex justify-center md:items-start md:justify-start">
+          <h1 className='flex gap-x-[8px] font-bold text-[25.07px] justify-start'><img
+          src="/images/Frame1.png" 
+          alt="Logo" 
+        />Ddsgnr</h1>
+          </div>
+          <div>
+            <h3 className="text-black text-xl font-bold mb-2">Courses</h3>
+            <div className="flex flex-col space-y-4">
+              <Link href={"#"} className="text-black">Business</Link>
+              <Link href={"#"} className="text-black">Development</Link>
+              <Link href={"#"} className="text-black">Technology</Link>
+              <Link href={"#"} className="text-black">Design</Link>
+              <Link href={"#"} className="text-black">Programming</Link>
+            </div>
+          </div>
+          <div>
+            <h3 className="text-black text-xl font-bold mb-2">Resources</h3>
+            <div className="flex flex-col space-y-4">
+              <Link href={"#"} className="text-black">Career</Link>
+              <Link href={"#"} className="text-black">Resume</Link>
+              <Link href={"#"} className="text-black">Learning</Link>
+              <Link href={"#"} className="text-black">Interview Preparation</Link>
+              <Link href={"#"} className="text-black">Jobs</Link>
+            </div>
+          </div>
+          <div>
+            <h3 className="text-black text-xl font-bold mb-2">About Us</h3>
+            <div className="flex flex-col space-y-4">
+              <Link href={"#"} className="text-black">Contact</Link>
+              <Link href={"#"} className="text-black">Help/Support</Link>
+              <Link href={"#"} className="text-black">FAQs</Link>
+              <Link href={"#"} className="text-black">Terms and Conditions</Link>
+              <Link href={"#"} className="text-black">Partner</Link>
+            </div>
+          </div>
         </div>
-      </div>
-
-      {/* Links Section */}
-{/* Links Section */}
-<div className="max-w-7xl mx-auto mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 py-9 text-center">
-  <div className="flex flex-col items-center space-y-2 pt-5 pb-5">
-    {/* Logo and Text */}
-    <img src='images/frame.png' alt="Logo" height={40} width={40} className="object-contain" />
-    <h3 className="text-xl font-bold text-[#000000]">Ddsgnr</h3>
-  </div>
-
-  <div className="flex flex-col items-center">
-    <h4 className="text-lg font-medium text-[#000000]">Courses</h4>
-    <ul className="mt-4 space-y-2 text-[#000000] text-sm">
-      <li>Business</li>
-      <li>Development</li>
-      <li>Technology</li>
-      <li>Design</li>
-      <li>Programming</li>
-    </ul>
-  </div>
-
-  <div className="flex flex-col items-center">
-    <h4 className="text-lg font-medium text-[#000000]">Resources</h4>
-    <ul className="mt-4 space-y-2 text-[#000000] text-sm">
-      <li>Career</li>
-      <li>Resume</li>
-      <li>Learning</li>
-      <li>Interview Preparation</li>
-      <li>Jobs</li>
-    </ul>
-  </div>
-
-  <div className="flex flex-col items-center">
-    <h4 className="text-lg font-medium text-[#000000]">About Us</h4>
-    <ul className="mt-4 space-y-2 text-[#000000] text-sm">
-      <li>Contact</li>
-      <li>Help/Support</li>
-      <li>FAQ</li>
-      <li>Terms and Conditions</li>
-      <li>Partners</li>
-    </ul>
-  </div>
-</div>
-
-      {/* Divider */}
-      <hr className="border-t border-black my-8" />
-
-      {/* Bottom Section */}
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-[#000000] text-sm">
-        <p>© 2023 Ddsgnr. All rights reserved.</p>
-        <div className="flex space-x-2 mt-2 md:mt-0 whitespace-nowrap">
-          <a href="#" className="underline">Privacy Policy</a>
-          <a href="#" className="underline">Terms of Service</a>
-          <a href="#" className="underline">Cookies Settings</a>
-        </div>
-        <div className="flex space-x-4 mt-4 md:mt-0">
-          <a
-            href="#"
-            aria-label="Facebook"
-            className="text-[#000000]"
-          >
-            <img src='images/Facebook.png' alt='Facebook'/>
-          </a>
-          <a
-            href="#"
-            aria-label="Instagram"
-            className="text-[#000000]"
-          >
-            <img src='images/Instagram.png' alt='Instagram'/>
-          </a>
-          <a
-            href="#"
-            aria-label="Twitter"
-            className="text-[#000000]"
-          >
-            <img src='images/Twitter.png' alt='Twitter'/>
-          </a>
-          <a
-            href="#"
-            aria-label="LinkedIn"
-            className="text-[#000000]"
-          >
-            <img src='images/Linkedin.png' alt='Linkedin'/>
-          </a>
+        <div className="border-t py-12 border-black pt-4 flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0">
+          <div className="flex flex-col md:flex-row gap-5 text-center md:text-left text-black">
+            <p>2023 Ddsgnr. All rights reserved.</p>
+            <div className="flex space-x-4">
+              <Link href="#" className="text-black underline underline-offset-3">
+                Privacy Policy
+              </Link>
+              <Link href="#" className="text-black underline underline-offset-3">
+                Terms of Services
+              </Link>
+              <Link href="#" className="text-black underline underline-offset-3">
+                Cookies Settings
+              </Link>
+            </div>
+          </div>
+          <div className="flex items-center space-x-3">
+            <div className="w-full max-w-[736px] h-6 flex justify-end gap-4">
+              <Link href={"#"} className="h-6 w-6">
+                <Image src={"/images/facebook.svg"} alt="facebook" width={18} height={18} />
+              </Link>
+              <Link href={"#"} className="h-6 w-6">
+                <Image src={"/images/instagram.svg"} alt="instagram" width={18} height={18} />
+              </Link>
+              <Link href={"#"} className="h-6 w-6">
+                <Image src={"/images/twitter.svg"} alt="twitter" width={18} height={18} />
+              </Link>
+              <Link href={"#"} className="h-6 w-6">
+                <Image src={"/images/linkedin.svg"} alt="linkedin" width={18} height={18} />
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}

@@ -1,27 +1,28 @@
-import Achievement from "@/components/Achivement/Achivement";
-import CourseCategory from "@/components/CourseCategory/CourseCategory";
-import Courses from "@/components/Courses/Courses";
-import CustomerTestimonial from "@/components/CustomerTestimonials/CoustomerTestimonial";
-import Footer from "@/components/Footer/Footer/Footer";
-import Header from "@/components/Header/Header";
-import HeroSection from "@/components/Hero/Hero";
-import Navbar from "@/components/Navbar/Navbar";
-import OurTeam from "@/components/OurTeam/OurTeam";
+import Achivements from '@/components/Achivement/Achivement';
+import Category from '@/components/CourseCategory/Category';
+import Courses from '@/components/Courses/Courses';
+import Testimonials from '@/components/CustomerTestimonials/Testimonial';
+import Footer from '@/components/Footer/Footer/Footer';
+import Header from '@/components/Header/Header';
+import Banner from '@/components/Hero/Banner';
+import Logo from '@/components/Logo/Logo';
+import Team from '@/components/OurTeam/Team';
+import React from 'react';
 
-
-export default function Home() {
+const Home = () => {
   return (
-    <div className="bg-white">
-      <Header/>
-      <Navbar/>
-      <HeroSection/>
-      <CourseCategory/>
-      <Achievement/>
-      <Courses/>
-      <OurTeam/>
-      <CustomerTestimonial/>
-      <Footer/>
+    <div>
+      <Header />
+      <Banner />
+      <Logo />
+      <Category />
+      <Achivements />
+      <Courses />
+      <Team />
+      <Testimonials />
+      <Footer />
     </div>
-    
   );
-}
+};
+
+export default Home;
