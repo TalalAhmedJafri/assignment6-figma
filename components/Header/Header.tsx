@@ -1,7 +1,6 @@
 "use client"
 import React, { useState } from 'react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
-import Image from 'next/image';
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false); 
 
